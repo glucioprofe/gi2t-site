@@ -1,0 +1,418 @@
+<div class="container" id="contenido">
+  <div *ngFor="let item of users" class="d-flex m-3">
+    <div class="flex-shrink-0">
+        <div class="text-center">
+            <img src="images/lucio.jpg" class="rounded-circle foto">
+        </div>
+        <ul class="list-group list-group-flush data">
+            <li class="list-group-item">{{ item.email }}</li>
+            <li *ngFor="let red of item!.redes" class="list-group-item">
+                <a href="{{red.url}}" target="_blank" class="text-decoration-none">
+                    {{ red.name }}
+                </a>
+            </li>
+        </ul>
+    </div>
+    <div class="flex-grow-1 ms-5">
+        <h1 class="mt-0">{{ item.name | titlecase }}</h1>
+        <!-- Some borders are removed -->
+        <div class="accordion accordion-flush" id="accordionFlushExample">
+
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                  <span class="lh1">Producción</span>
+                </button>
+              </h2>
+              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!-- Some borders are removed -->
+                    <ul class="list-group list-group-flush">
+                        <h3>Publicaciones</h3>
+                        <li class="list-group-item" *ngFor="let prod of item.produccion.publicaciones">
+                            <a href="https://gi2t.org/documents/DocumentoTrabajo.pdf" target="_blank" class="text-decoration-none">
+                                {{ prod.text }}
+                            </a>
+                        </li>
+                    </ul>
+                    <ul class="list-group list-group-flush mt-3">
+                        <h3>Software</h3>
+                        <li class="list-group-item" *ngFor="let soft of item.produccion.software">
+                            <p class="m-0 text-dark fw-bold">
+                                {{ soft.name }}
+                            </p>
+                            <small *ngIf="soft.derautor">{{ soft.derautor }}</small>
+                        </li>
+
+                    </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                    <span class="lh1">Experiencia Profesional</span>
+                </button>
+              </h2>
+              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <!-- Some borders are removed -->
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Universitario (Tiempo Completo)<br>
+                                Director de Programa<br>
+                                Director Académico
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad del Pacífico
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2006 - Actual
+                                </small> /
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Universitario (Tiempo Completo)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad del Pacífico
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2004
+                                </small> /
+                                <small>
+                                    Guapi – Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Universitario (Catédra)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad del Valle
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2018 - Actual
+                                </small> /
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente. Diplomado en Docencia Universitaria<br>
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Modúlo: Uso de las TIC en la educación superior<br>
+                                Universidad del Valle
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Agosto 2023
+                                </small> /
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Diplomado (Contratista - SCRUM)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad EAN & Fundación Telefónica
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Octubre – Noviembre 2019
+                                </small> /
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Universitario (Catédra)<br>
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad Cooperativa de Colombia
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Enero – Diciembre 2011<br>
+                                    Enero 2005 – Diciembre 2006
+                                </small> /
+                                <small>
+                                    Cali – Valle del Cauca<br>
+                                    Popayán – Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Docente Universitario (Tiempo Completo)<br>
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad Cooperativa de Colombia
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Enero 2002 – Mayo 2004
+                                </small> /
+                                <small>
+                                    Popayán – Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Desarrolador Plataforma Digital para la Integración de los Servicios del Sector Turístico del Distrito (Contratista)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Univalle – Cámara de Comercio
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Agosto – Noviembre 2019
+                                </small> /
+
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                Diseño, Desarrollo y despliegue plataforma en línea para la gestión de información de empresas turísticas registradas en la cámara de comercio de Buenaventura.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Analista, Diseñador y Desarrollador (Contratista)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Comité Paro Cívico
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Mayo 2018 – Febrero 2019
+                                </small> /
+
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                Desarrollo, implementación y administrador backend de plataforma online para comité cívico de Buenaventura.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Director de Proyecto de Software
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                GCReingenieria
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Septiembre 2012 – Septiembre 2013
+                                </small> /
+
+                                <small>
+                                    Bogotá (Remoto)
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                Responsable de la planeación estratégica, control y seguimiento de los procesos de desarrollo del sistema para el monitoreo de avances en obras civiles en relación con los planes y la ejecución del presupuesto.
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Fundador
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                CLibre I+D
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Marzo 2010 – Octubre 2014
+                                </small> /
+
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                CFO, CTO, Analista, Desarrollador y administrador plataforma de gestión académica en instituciones educativas (Mandanga). Registro Derechos de autor 1-2009-9773
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Analista, Diseñador y Desarrollador (Contratista)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Alcaldía Distrital
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    Septiembre – Diciembre 2009
+                                </small> /
+
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                Implementación sistema de información web para el Anuario Estadístico del Distrito de Buenaventura
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Analista, Diseñador y Desarrollador - Sistema Académico en línea
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad del Pacifico
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2008 - 2010
+                                </small> /
+
+                                <small>
+                                    Buenaventura – Valle del Cauca
+                                </small>
+                            </p>
+                            <p class="ms-3">
+                                Arquitecto y Desarrollador de la plataforma académica para matricula y registro de notas de la Universidad del Pacífico
+                            </p>
+                        </li>
+                      </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                    <span class="lh1">Formación Académica</span>
+                </button>
+              </h2>
+              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+                <div class="accordion-body">
+                    <ul class="list-group list-group-flush">
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Maestría en Innovación Educativa.
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad ICESI
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2023
+                                </small> /
+
+                                <small>
+                                    Cali – Valle del Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Dirección de Sistemas de Información sobre Software Libre (Becario)
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universitat Oberta de Catalunya
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2005
+                                </small> /
+
+                                <small>
+                                    Barcelona (Online)
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Maestría en Administración de Empresas
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Fundación Universitaria Maria Cano
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2004
+                                </small> /
+
+                                <small>
+                                    Medellín – Antioquia
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Especialización en Alta Gerencia
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Fundación Universitaria Maria Cano
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2003
+                                </small> /
+
+                                <small>
+                                    Popayán – Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                Ingeniero de Sistemas
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Universidad Cooperativa de Colombia
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2001
+                                </small> /
+
+                                <small>
+                                    Popayán – Cauca
+                                </small>
+                            </p>
+                        </li>
+                        <li class="list-group-item">
+                            <h1 class="fw-bold hv1 m-0">
+                                SEI-Certified PSP Developer
+                            </h1>
+                            <p class="text-secondary ms-3 mb-0">
+                                Carnegie Mellon
+                            </p>
+                            <p class="fw-lighter text-secondary ms-3 mb-0">
+                                <small>
+                                    2014
+                                </small>
+                            </p>
+                        </li>
+                    </ul>
+                </div>
+              </div>
+            </div>
+        </div>
+
+
+    </div>
+  </div>
+</div>

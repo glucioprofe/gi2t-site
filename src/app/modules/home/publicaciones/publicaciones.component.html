@@ -1,1 +1,23 @@
-<p>publicaciones works!</p>
+<div class="container" id="contenido">
+    <div class="row">
+        <section class="col-12">
+            <h1 class="m-sm-3">Publicaciones</h1>
+            <div *ngFor="let item of publicaciones" class="d-flex mx-sm-3 mb-3 p-sm-3 media-object">
+              <div class="flex-shrink-0 text-center">
+                <img [src]="'assets/images/publicaciones/doc'+item.id+'.png'"><br>
+                <a [href]="item.url" target="_blank" class="text-decoration-none text-primary">
+                    <i class=" text-danger fa-regular fa-file-pdf"></i>
+                    Descargar
+                </a>
+
+              </div>
+              <div class="flex-grow-1 ms-sm-3 mt-3 mt-sm-0 d-none d-sm-block">
+                  <h1 class="lh1">{{item.title}}</h1>
+                  <p class="lh2">{{item.subtitle}}</p>
+                  <p class="date">{{item.date}}</p>
+                  <p>{{item.text}}</p>
+              </div>
+            </div>
+        </section>
+    </div>
+</div>

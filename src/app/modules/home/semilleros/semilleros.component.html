@@ -1,30 +1,30 @@
 <div class="container" id="contenido">
     <div class="row">
-        <div class="col-8 px-5">
+        <div class="col-12 col-sm-8 px-sm-5">
             <div class="d-flex mb-3">
                 <div class="flex-shrink-0">
                     <img src="assets/images/logoua2.svg" style="width: 160px">
                 </div>
-                <div class="flex-grow-1 ms-3">
+                <div class="flex-grow-1 ms-3 d-none d-sm-block">
                     <h1>
                         Objetivo General del Semillero de Investigación UA2
                     </h1>
                 </div>
             </div>
-            <div>                
+            <div>
                     <p>
                         El objetivo general del semillero de investigación UA2 es contribuir al desarrollo sostenible de las comunidades asentadas en el litoral pacífico colombiano, mediante la caracterización y acciones centradas en el acceso, uso y apropiación de las TIC. Se busca determinar el impacto real de la tecnología en diversos sectores socioeconómicos, con especial énfasis en la mejora de labores productivas y educativas, evaluando si la tecnología utilizada realmente se convierte en un activo que genera valor para las comunidades y grupos étnicos involucrados.
                     </p>
                     <h2>Objetivos Específicos del Semillero:</h2>
                     <ol>
                         <li>
-                            Realizar un diagnóstico detallado del nivel de acceso a las TIC en distintas comunidades y grupos étnicos del litoral pacífico, identificando brechas y desigualdades para proponer estrategias que promuevan una mayor inclusión digital.   
+                            Realizar un diagnóstico detallado del nivel de acceso a las TIC en distintas comunidades y grupos étnicos del litoral pacífico, identificando brechas y desigualdades para proponer estrategias que promuevan una mayor inclusión digital.
                         </li>
                         <li>
                             Caracterizar el uso y la apropiación de las TIC en las actividades diarias de los sectores socioeconómicos estudiados, incluyendo el análisis de su aplicación en actividades productivas, educativas y otras áreas relevantes.
                         </li>
                         <li>
-                            Identificar las necesidades y desafíos específicos que enfrentan las comunidades en cuanto al uso de la tecnología, y proponer soluciones y capacitaciones que optimicen su aprovechamiento.                     
+                            Identificar las necesidades y desafíos específicos que enfrentan las comunidades en cuanto al uso de la tecnología, y proponer soluciones y capacitaciones que optimicen su aprovechamiento.
                         </li>
                         <li>
                             Evaluar el impacto de la tecnología en la mejora de la productividad y eficiencia en actividades económicas locales, destacando casos exitosos y buenas prácticas.
@@ -49,26 +49,26 @@
                         </li>
                     </ol>
             </div>
-              
         </div>
-            
-            
-            
-        <div class="col-4 listado  border-start">
+
+
+
+        <div class="d-none d-sm-block col-sm-4 listado  border-start">
             <div class="d-flex py-1 border-bottom" *ngFor="let item of semilleros">
                 <div class="flex-shrink-0">
                     <img [src]="'https://placehold.co/60'" class="rounded-circle foto" style="width: 65px">
                 </div>
                 <div class="flex-grow-1 ms-2 item">
                     <h5 class="fw-bold my-0">{{ item.nombre }}</h5>
-                    <p class="text-muted small mb-0">{{ item.email }}</p>               
-                    <a class="btn ms-0 ps-0 btn-link text-decoration-none" style="color: #0a66c2;"><i class="fa-brands fa-linkedin me-1"></i>LinkedIn</a>                        
+                    <p class="text-muted small mb-0">{{ item.email }}</p>
+                    <!--
+                      <a class="btn ms-0 ps-0 btn-link text-decoration-none" style="color: #0a66c2;"><i class="fa-brands fa-linkedin me-1"></i>LinkedIn</a>
+                    -->
                 </div>
             </div>
         </div>
 
-        
-        
+
+
     </div>
 </div>
-        

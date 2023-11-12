@@ -1,13 +1,13 @@
 <header class="container-fluid">
     <div id="banner">
         <figure id="he">
-            <img src="assets/images/he.png" class="m-1">
+            <img src="assets/images/he.png" class="m-1 d-none d-sm-block">
         </figure>
         <figure id="logo">
             <img src="assets/images/logogi2t.svg" class="m-1">
         </figure>
         <figure id="she">
-            <img src="assets/images/she.png" class="m-1">
+            <img src="assets/images/she.png" class="m-1 d-none d-sm-block">
         </figure>
     </div>
     <div class="row">
@@ -19,7 +19,6 @@
               </button>
               <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                 <div class="offcanvas-header">
-                  <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
                   <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                 </div>
                 <div class="offcanvas-body">
@@ -32,9 +31,6 @@
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" routerLinkActive="text-white" [routerLink]="['semilleros']">Semilleros</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link" aria-current="page" routerLinkActive="text-white" [routerLink]="['proyectos']">Proyectos</a>
                     </li>
                     <li class="nav-item">
                       <a class="nav-link" aria-current="page" routerLinkActive="text-white" [routerLink]="['publicaciones']">Publicaciones</a>
@@ -51,31 +47,36 @@
 </main>
 <footer class="container-fluid">
     <div class="container">
-        <div class="row pt-3 mt-3 pb-5">
-
-          <div class="col-4">
+        <div class="row pt-3 mt-3">
+          <div class="col-12 col-sm-4 mb-5 mb-sm-0">
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Inicio</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Investigadores</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Semillero</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Proyectos</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Publicaciones</a></li>
+              <li class="nav-item mb-2"><a [routerLink]="['inicio']" class="nav-link p-0 text-muted">Inicio</a></li>
+              <li class="nav-item mb-2"><a [routerLink]="['investigadores']" class="nav-link p-0 text-muted">Investigadores</a></li>
+              <li class="nav-item mb-2"><a [routerLink]="['semilleros']" class="nav-link p-0 text-muted">Semillero</a></li>
+              <li class="nav-item mb-2"><a [routerLink]="['publicaciones']" class="nav-link p-0 text-muted">Publicaciones</a></li>
             </ul>
           </div>
 
-          <div class="col-4">
+          <div class="col-12 col-sm-4 mb-5 mb-sm-0">
             <ul class="nav flex-column">
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Unipacifico</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Ingenieria de Sistemas</a></li>
-              <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-muted">Uso y Acceso</a></li>
+              <li class="nav-item mb-2"><a href="www.unipacifico.edu.co" target="_blank" class="nav-link p-0 text-muted">Unipacifico</a></li>
+              <li class="nav-item mb-2"><a href="https://www.facebook.com/ingsistemasunipac" target="_blank"  class="nav-link p-0 text-muted">Ingenieria de Sistemas</a></li>
             </ul>
           </div>
 
-          <div class="col-4">
+          <div class="col-12 col-sm-4 mb-5 mb-sm-0">
             <a href="/" class="d-flex align-items-end mb-3 link-dark text-decoration-none">
-              <img src="assets/images/unpaisgray.svg">
+              <img src="assets/images/unpaisgray.svg" class="img-fluid">
             </a>
+
           </div>
+        </div>
+        <div class="row">
+          <p class="mb-1 text-center text-secondary" style="line-height: .8rem;">
+            <small style="font-size: 0.8rem;">
+              Sitio Web Diseñado y Desarrollado por Gonzalo Andrés Lucio.<br> Derechos Reservados &copy; - Buenaventura - Valle del Cauca. {{ currentYear }}
+            </small>
+          </p>
         </div>
     </div>
   </footer>

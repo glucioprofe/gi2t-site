@@ -1,8 +1,8 @@
 <div class="container" id="contenido">
-  <div *ngFor="let item of users" class="d-flex m-3">
+  <div *ngFor="let item of users" class="d-flex m-3 mb-5">
     <div class="flex-shrink-0">
         <div class="text-center">
-            <img src="images/lucio.jpg" class="rounded-circle foto">
+            <img [src]="'assets/images/inv'+item.id+'.png'" class="rounded-circle foto">
         </div>
         <ul class="list-group list-group-flush data">
             <li class="list-group-item">{{ item.email }}</li>
@@ -13,18 +13,18 @@
             </li>
         </ul>
     </div>
-    <div class="flex-grow-1 ms-5">
+    <div class="flex-grow-1 ms-5 d-none d-sm-block">
         <h1 class="mt-0">{{ item.name | titlecase }}</h1>
         <!-- Some borders are removed -->
-        <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion accordion-flush" [id]="'accordionFlush' + item.id">
 
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false" aria-controls="flush-collapseOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapseOne'+item.id">
                   <span class="lh1">Producción</span>
                 </button>
               </h2>
-              <div id="flush-collapseOne" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div [id]="'flush-collapseOne'+item.id" class="accordion-collapse collapse" [attr.data-bs-parent]="'#accordionFlush' + item.id">
                 <div class="accordion-body">
                     <!-- Some borders are removed -->
                     <ul class="list-group list-group-flush">
@@ -50,11 +50,11 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseTwo" aria-expanded="false" aria-controls="flush-collapseTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapseTwo'+item.id">
                     <span class="lh1">Experiencia Profesional</span>
                 </button>
               </h2>
-              <div id="flush-collapseTwo" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div [id]="'flush-collapseTwo'+item.id" class="accordion-collapse collapse"  [attr.data-bs-parent]="'#accordionFlush' + item.id">
                 <div class="accordion-body">
 
                     <ul class="list-group list-group-flush">
@@ -301,11 +301,11 @@
             </div>
             <div class="accordion-item">
               <h2 class="accordion-header">
-                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#flush-collapseThree" aria-expanded="false" aria-controls="flush-collapseThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" [attr.data-bs-target]="'#flush-collapseThree'+item.id">
                     <span class="lh1">Formación Académica</span>
                 </button>
               </h2>
-              <div id="flush-collapseThree" class="accordion-collapse collapse" data-bs-parent="#accordionFlushExample">
+              <div [id]="'flush-collapseThree'+item.id" class="accordion-collapse collapse"  [attr.data-bs-parent]="'#accordionFlush' + item.id">
                 <div class="accordion-body">
                     <ul class="list-group list-group-flush">
                         <li class="list-group-item">

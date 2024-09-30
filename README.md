@@ -1,27 +1,27 @@
-# Grupogi2t
+<p align="center">
+  <img src="./assets/logogi2t.png" alt="Logo del Grupo" width="200"/>
+</p>
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+# Política y Desarrollo de TIC en Colombia
 
-## Development server
+En las últimas tres décadas, el interés del Gobierno colombiano en el desarrollo del sector de las Tecnologías de la Información y Comunicación (TIC) se ha reflejado en los lineamientos de política establecidos en los planes de desarrollo. Estas políticas consideran a las TIC como herramientas clave para el desarrollo económico del país. Sin embargo, al analizar la política social y educativa reciente, se evidencian diferencias e inequidades especialmente entre los centros poblados de la zona andina frente al resto de territorios del país.
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Por otra parte, las estrategias de inclusión social a través de las TIC no han logrado mejorar la calidad de la educación ni transformar los procesos de aprendizaje de manera significativa. Los programas existentes se centran principalmente en estadísticas generales de cobertura y expansión de la infraestructura tecnológica, así como en la cantidad de objetos de aprendizaje o contenidos disponibles en los espacios institucionales. Ante esta situación, es necesario llevar a cabo estudios que caractericen a las instituciones educativas en términos de los contenidos digitales que se producen, el estado real de la infraestructura tecnológica y el nivel de acceso, uso y apropiación de la tecnología de los estudiantes.
 
-## Code scaffolding
+Es en este escenario donde el Grupo GI2T de la Universidad del Pacifico junto al Semillero UA2 adelantan de manera continua procesos de caracterización y monitoreo de las condiciones de las comunidades del pacifico frente al acceso, uso y apropiación de las TIC en sectores como la educación, el turismo y la seguridad alimentaria.
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## Publicaciones y Resultados
 
-## Build
+Resultado de este proceso presentamos documentos de dominio público del sector educativo del Distrito de Buenaventura:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+### Investigadores:
+- Gonzalo Andrés Lucio López
+- Sandra Patricia Rivera Guzmán
+- Yowana Karina Caicedo Guerrero
 
-## Running unit tests
+### Boletines:
+- Institución Educativa Antonio Nariño [2022]
+- Institución Educativa Técnica Industrial Gerardo Valencia Cano [2022]
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+### Documento de Trabajo (Document Paper):
+- Explorando el panorama de uso y acceso a las TIC en estudiantes de media vocacional

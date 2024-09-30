@@ -27,12 +27,17 @@
             "inlineStyleLanguage": "sass",
             "assets": [
               "src/favicon.ico",
-              "src/assets"
+              "src/.htaccess",
+              "src/assets",
+              "src/documents"
             ],
             "styles": [
-              "src/styles.sass"
+              "src/styles.sass",
+              "node_modules/lightbox2/dist/css/lightbox.min.css"
             ],
-            "scripts": []
+            "scripts": [
+              "node_modules/lightbox2/dist/js/lightbox-plus-jquery.min.js"
+            ]
           },
           "configurations": {
             "production": {

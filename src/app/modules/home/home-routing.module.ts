@@ -6,6 +6,7 @@ import { InvestigadoresComponent } from './investigadores/investigadores.compone
 import { PublicacionesComponent } from './publicaciones/publicaciones.component';
 import { ProyectosComponent } from './proyectos/proyectos.component';
 import { SemillerosComponent } from './semilleros/semilleros.component';
+import { EventosComponent } from './eventos/eventos.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent, children: [
@@ -15,6 +16,7 @@ const routes: Routes = [
       { path: 'semilleros', component: SemillerosComponent },
       { path: 'proyectos', component: ProyectosComponent },
       { path: 'publicaciones', component: PublicacionesComponent },
+      { path: 'eventos', component: EventosComponent },
     ]
   }
 ];

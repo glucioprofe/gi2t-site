@@ -54,17 +54,21 @@
 
 
         <div class="d-none d-sm-block col-sm-4 listado  border-start">
-            <div class="d-flex py-1 border-bottom" *ngFor="let item of semilleros">
+            <div class="d-flex py-1 border-bottom" *ngFor="let item of filteredSemilleros">
                 <div class="flex-shrink-0">
-                    <img [src]="'https://placehold.co/60'" class="rounded-circle foto" style="width: 65px">
+                    <img *ngIf="!item.picture" [src]="'https://placehold.co/60'" class="rounded-circle foto" style="width: 65px">
+                    <img *ngIf="item.picture" [src]="'assets/images/'+item.id+'.webp'" class="rounded-circle foto" style="width: 65px">
                 </div>
                 <div class="flex-grow-1 ms-2 item">
                     <h5 class="fw-bold my-0">{{ item.nombre }}</h5>
                     <p class="text-muted small mb-0">{{ item.email }}</p>
-                    <!--
-                      <a class="btn ms-0 ps-0 btn-link text-decoration-none" style="color: #0a66c2;"><i class="fa-brands fa-linkedin me-1"></i>LinkedIn</a>
-                    -->
+                    <a *ngIf="item.social" href="{{item.social}}" target="_blank" class="btn m-0 p-0 btn-link text-decoration-none" style="color: #0a66c2;"><i class="fa-brands fa-linkedin me-1"></i>LinkedIn</a>
+
                 </div>
+            </div>
+            <div class="d-grid mt-2 gap-2">
+              <button *ngIf="!showAll" (click)="toggleShowAll()" style="background: #61b146; border: 0; color: #003844;">Ver todo</button>
+              <button *ngIf="showAll" (click)="toggleShowAll()" style="background: #003844; border: 0; color: #fafafa;">Ver menos</button>
             </div>
         </div>
 

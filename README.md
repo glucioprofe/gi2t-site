@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./assets/logogi2t.png" alt="Logo del Grupo" width="200"/>
+  <img src="./assets/images/logogi2t.svg" alt="Logo del Grupo" width="200"/>
 </p>
 
 # Política y Desarrollo de TIC en Colombia

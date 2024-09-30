@@ -1,4 +1,4 @@
-<p align="center">
+<p align="center" style="background: white">
   <img src="./src/assets/images/logogi2t.svg" alt="Logo del Grupo" width="200"/>
 </p>
 
